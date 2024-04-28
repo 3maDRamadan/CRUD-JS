@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
+    <title>Crud System</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-3">Product Management System</h1>
+      <div class="col-12 mb-3">
+        <label for="">Product Name :</label>
+        <input type="text" class="form-control" id="ProductName" />
+      </div>
+      <div class="col-12 mb-3">
+        <label for="">Product Price :</label>
+        <input type="text" class="form-control" id="ProductPrice" />
+      </div>
+      <div class="col-12 mb-3">
+        <label for="">Product category :</label>
+        <input type="text" class="form-control" id="ProductCategory" />
+      </div>
+      <div class="col-12 mb-3">
+        <label for="">Product description :</label>
+        <input type="text" class="form-control" id="ProductDescription" />
+      </div>
+      <button class="btn btn-info" onclick="addProduct()">Add Product</button>
+      <button class="btn btn-danger" onclick="deleteAll()">
+        Delete All Products
+      </button>
+      <div class="col-12 mt-3 mb-3 w-50 d-flex justify-center">
+        <input
+          type="text"
+          class="form-control"
+          id="search"
+          placeholder="Search..."
+          onkeyup="serchP(this.value)"
+        />
+      </div>
+      <div class="table">
+        <table class="table-bordered table mt-3 text-center">
+          <thead>
+            <th>ID</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Category</th>
+            <th>Product Description</th>
+            <th class="">Action</th>
+          </thead>
+          <tbody id="productBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="vendor/bootstrap/bootstrap.bundle.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
